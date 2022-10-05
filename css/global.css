@@ -1,0 +1,95 @@
+:root{
+    --pri: #f7f7f6;
+    --bg: #983b44;
+    --sec: #df8fa6;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: var(--bg);
+}
+hr{
+    background-color: var(--sec);
+    margin: 1px 5%;
+    margin-bottom: 2rem;
+}
+.header{
+    padding: 1.25rem;
+    color: var(--sec);
+    text-align: center;
+}
+.countries{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.countries ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    justify-items: stretch;
+    align-items: stretch;
+    padding: 1rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--pri);
+    align-items: center;
+    justify-content: center;
+    color: var(--sec);
+    border-radius: 12px;
+    padding: 1rem 1rem 0 1rem;
+    overflow: hidden;
+    position: relative;
+    max-width:296px;
+    height: 100%;
+}
+.card img{
+    border-radius: 12px;
+    transition: all 500ms ease;
+    object-fit: contain;
+    width: 100%;
+}
+.card b{
+    margin: 0.5rem 0;
+}
+.boxtitle{
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    opacity: 0;
+    transition: 500ms ease all;
+}
+.card:hover img{
+    scale: 1.8;
+}
+.card:hover .boxtitle{
+    opacity: 0.7;
+}
+.place{
+    padding: 0;
+    max-width: max-content;
+}
+@media only screen and (min-width:420px) {
+    .countries ul{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (min-width:1000px) {
+    .countries ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
